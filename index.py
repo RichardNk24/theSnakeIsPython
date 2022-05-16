@@ -1,26 +1,47 @@
-def sum(a, b):
-    return a + b
+# Python program to determine whether
+# the number is Armstrong number or not
+  
+# Function to calculate x raised to 
+# the power y
+def power(x, y):
+      
+    if y == 0:
+        return 1
+    if y % 2 == 0:
+        return power(x, y // 2) * power(x, y // 2)
+          
+    return x * power(x, y // 2) * power(x, y // 2)
+  
+# Function to calculate order of the number
+def order(x):
+  
+    # Variable to store of the number
+    n = 0
+    while (x != 0):
+        n = n + 1
+        x = x // 10
+          
+    return n
 
-def sub(a, b):
-    return a - b
+# Function to check whether the given 
+# number is Armstrong number or not
+def isArmstrong(x):
 
-def mul(a, b):
-    return a * b
+    n = order(x)
+    temp = x
+    sum1 = 0
 
-def div(a, b):
-    return a / b
-
-a = float(input('First: '))
-b = float(input('Second: '))
-op = input('Operation (sum/sub/mul/div): ')
-
-if op == 'sum':
-    print(f'a + b = {sum(a, b)}')
-elif op == 'sub':
-    print(f'a - b = {sub(a, b)}')
-elif op == 'mul':
-    print(f'a * b = {mul(a, b)}')
-elif op == 'div':
-    print(f'a / b = {div(a, b)}')
-else:
-    print('Invalid Operation!')
+    while (temp != 0):
+        r = temp % 10
+        sum1 = sum1 + power(r, n)
+        temp = temp // 10
+  
+    # If condition satisfies
+    return (sum1 == x)
+  
+# Driver code
+x = 153
+print(isArmstrong(x))
+  
+x = 1253
+print(isArmstrong(x))
