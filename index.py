@@ -45,3 +45,24 @@ print(isArmstrong(x))
   
 x = 1253
 print(isArmstrong(x))
+# using If Statement
+
+yr = int(input("Please Enter the Number you wish: "))
+
+if (( yr%400 == 0)or (( yr%4 == 0 ) and ( yr%100 != 0))):
+    print("%d is a Leap year" %yr)
+else:
+    print("%d is Not" %yr)
+
+# using Elif Statement
+
+ya = int(input("Please Enter as you wish : "))
+
+if (ya%400 == 0):
+    print("%d is a Leap year" %ya)
+elif (ya%100 == 0):
+    print("%d is Not" %ya)
+elif (ya%4 == 0):
+    print("%d is a Leap year" %ya)
+else:
+    print("%d is Not" %ya)
