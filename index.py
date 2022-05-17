@@ -77,3 +77,41 @@ for i in range(1, exponent + 1):
     power = power * number
     
 print("The Result of {0} Power {1} = {2}".format(number, exponent, power))
+
+# Python Program to find Power of a Number
+
+number = int(input(" Please Enter any Positive Integer : "))
+exponent = int(input(" Please Enter Exponent Value : "))
+
+power = 1
+i = 1
+
+while(i <= exponent):
+    power = power * number
+    i = i + 1
+    
+print("The Result of {0} Power {1} = {2}".format(number, exponent, power))
+
+Number = int(input(" Please Enter any Number: "))
+Sum = 0
+Temp = Number
+
+while(Temp > 0):
+    Factorial = 1
+    i = 1
+    Reminder = Temp % 10
+
+    while(i <= Reminder):
+        Factorial = Factorial * i
+        i = i + 1
+
+    print("\n Factorial of %d = %d" %(Reminder, Factorial))
+    Sum = Sum + Factorial
+    Temp = Temp // 10
+
+print("\n Sum of Factorials of a Given %d = %d" %(Number, Sum))
+    
+if (Sum == Number):
+    print(" %d is a Strong Number" %Number)
+else:
+    print(" %d is not" %Number)
