@@ -1,6 +1,8 @@
 # Python program to determine whether
 # the number is Armstrong number or not
 import math
+import statistics
+import array as arr
 
 princ_amount = float(input(" Please Enter the Principal Amount : "))
 rate_of_int = float(input(" Please Enter the Rate Of Interest   : "))
@@ -12,13 +14,22 @@ compound_int = ci_future - princ_amount
 print("Future Compound Interest for Principal Amount {0} = {1}".format(princ_amount, ci_future))
 print("Compound Interest for Principal Amount {0} = {1}".format(princ_amount, compound_int))
 
+# list of positive integer numbers   
+datasets = [5, 2, 7, 4, 2, 6, 8]     
+x = statistics.mean(datasets)     
+# Printing the mean   
+print("Mean is :", x)  
 
+a = arr.array('i', [2, 4, 6, 8])  
+print("First element:", a[0])  
+print("Second element:", a[1])  
+print("Second last element:", a[-1])  
 
 
 # Function to calculate x raised to 
 # the power y
 def power(x, y):
-      
+    
     if y == 0:
         return 1
     if y % 2 == 0:
