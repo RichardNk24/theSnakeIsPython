@@ -30,7 +30,7 @@ print("Second last element:", a[-1])
 # the power y
 def power(x, y):
     
-    if   y == 0:
+    if  y == 0:
         return 1
     if y % 2 == 0:
         return power(x, y // 2) * power(x, y // 2)
