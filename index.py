@@ -3,6 +3,8 @@
 import math
 import statistics
 import array as arr
+import re  
+
 
 princ_amount = float(input(" Please Enter the Principal Amount : "))
 rate_of_int = float(input(" Please Enter the Rate Of Interest   : "))
@@ -163,4 +165,11 @@ elif(sale_amount > actual_cost):
     amount = sale_amount - actual_cost
     print("Total Profit = {0}".format(amount))
 else:
-    print("No Profit No Loss!!!")
+    
+ actual_cost = "How are you. How is everything"  
+  
+matches = re.search("How", str)  
+  
+print(type(matches))  
+  
+print(matches) #matches is the search object
